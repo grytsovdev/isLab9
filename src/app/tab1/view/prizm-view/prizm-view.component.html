@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      MVC
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <form [formGroup]="prizmForm" (ngSubmit)="res()">
+    <ion-card>
+      <ion-card-header>
+        Трикутна Призма
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+
+          <input id="a1" type="text"
+            label="Катет A:" labelPlacement="floating"
+            type="number"
+            min="1" max="100"
+            formControlName="a">
+        </ion-item>
+        <ion-item>
+          <input id="b1" type="text"
+            label="Катет B:" labelPlacement="floating"
+            type="number" min="1" max="100"
+            formControlName="b">
+        </ion-item>
+
+        <ion-item>
+          <input id="h" type="text"
+            label="Висота:" labelPlacement="floating"
+            type="number" min="1" max="100"
+            formControlName="h">
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+    <ion-button
+      type="submit" color="success"
+      expand="block" [disabled]="!prizmForm.valid">
+      Розрахунок
+    </ion-button>
+  </form>
+  <ion-item>
+    Площа: {{area}}
+    Об'єм:{{volume}}
+  </ion-item>
+</ion-content>

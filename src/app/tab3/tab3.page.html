@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      MVP
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    <ion-card-header>
+      <h2 class="f-f">Призма</h2>
+
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item color="transparent" lines="none">
+
+        <ion-input label="Катет a" labelPlacement="floating" #inputA
+          class="f-f "
+          type="number" value="3"></ion-input>
+      </ion-item>
+      <ion-item color="transparent" lines="none">
+
+        <ion-input label="Катет b" labelPlacement="floating" #inputB
+          class="f-f" type="number" value="4"></ion-input>
+      </ion-item>
+      <ion-item color="transparent" lines="none">
+
+        <ion-input label="Висота" labelPlacement="floating" #inputH
+          class="f-f" type="number" value="4"></ion-input>
+      </ion-item>
+      <ion-item>
+        {{ras(inputA.value,inputB.value,inputH.value)}}
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
